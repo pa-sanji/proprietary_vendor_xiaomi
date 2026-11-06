@@ -1062,6 +1062,7 @@ PRODUCT_PACKAGES += \
     CneApp \
     ConnectionSecurityService \
     IWlanService \
+    QtiTelephonyService \
     TimeService \
     TrustZoneAccessService \
     HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
