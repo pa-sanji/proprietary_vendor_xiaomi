@@ -300,13 +300,16 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-class0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-class0.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-class0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-class0.conf \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-mgame.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-mgame.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-normal.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-per-class0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-per-class0.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-per-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-per-normal.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-per-video.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-per-video.conf \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-tgame.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-tgame.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-india-video.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-india-video.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-map-india.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-map-india.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-map.conf \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-mgame.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-mgame.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-navigation.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-navigation.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-nolimits.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-nolimits.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-normal.conf \
@@ -317,8 +320,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-per-video.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-per-video.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-phone.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-phone.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-region-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-region-map.conf \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-tgame.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-tgame.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermal-video.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-video.conf \
     vendor/xiaomi/alioth/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/vibrator/primitive_effect_1.bin:$(TARGET_COPY_OUT_VENDOR)/etc/vibrator/primitive_effect_1.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/vibrator/primitive_effect_2.bin:$(TARGET_COPY_OUT_VENDOR)/etc/vibrator/primitive_effect_2.bin \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/vibrator/primitive_effect_7.bin:$(TARGET_COPY_OUT_VENDOR)/etc/vibrator/primitive_effect_7.bin \
     vendor/xiaomi/alioth/proprietary/vendor/etc/tunings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/tunings.txt \
     vendor/xiaomi/alioth/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/xiaomi/alioth/proprietary/vendor/firmware/0_click_P_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/0_click_P_RTP.bin \
@@ -1071,29 +1078,7 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     vendor.qti.hardware.limits@1.0-service.xml
 
-# Dolby (Xiaomi QDSP DAP)
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/alioth/proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.dolby.hardware.dms@2.0-service \
-    vendor/xiaomi/alioth/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
-    vendor/xiaomi/alioth/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
-    vendor/xiaomi/alioth/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/libdapparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdapparamstorage.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/libdeccfg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdeccfg.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/libstagefright_soft_ac4dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ac4dec.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/libstagefright_soft_ddpdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_soft_ddpdec.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/libstagefrightdolby.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrightdolby.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/soundfx/libhwdap.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libhwdap.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/soundfx/libswdap.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libswdap.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/soundfx/libswgamedap.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libswgamedap.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/soundfx/libswvqe.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libswvqe.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib/vendor.dolby.hardware.dms@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.dolby.hardware.dms@2.0.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib64/libdapparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdapparamstorage.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib64/libdlbdsservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdlbdsservice.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@2.0-impl.so \
-    vendor/xiaomi/alioth/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@2.0.so
-
-PRODUCT_PACKAGES += \
-    manifest_vendor.dolby.hardware.dms.xml
+# Dolby is provided by hardware/dolby through device/xiaomi/alioth/dolby-stage1.mk.
 
 # OMX audio encoders (reference blobs; camera MediaRecorder AAC)
 PRODUCT_COPY_FILES += \
